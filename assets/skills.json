@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Java",
+    "icon": "fab fa-java",
+    "description": "Sviluppo backend solido e orientato agli oggetti."
+  },
+  {
+    "title": "Spring",
+    "icon": "fas fa-leaf",
+    "description": "REST API robuste con Spring Boot e MVC."
+  },
+  {
+    "title": "C#",
+    "icon": "fas fa-code",
+    "description": "Applicazioni desktop e backend efficienti."
+  },
+  {
+    "title": ".NET",
+    "icon": "fas fa-network-wired",
+    "description": "Architetture modulari con .NET Core e Framework."
+  },
+  {
+    "title": "Angular",
+    "icon": "fab fa-angular",
+    "description": "Frontend SPA moderne e modulari."
+  }
+]

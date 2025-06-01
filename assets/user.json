@@ -1,0 +1,12 @@
+{
+	"name": "Gabriele Maferri",
+	"email": "gabriele.maferri@proton.me",
+	"image": "assets/img/propic.png",
+    "socials": {
+        "github": {"url": "https://github.com/gabrielemaferri",
+                   "icon": "fab fa-github"},
+        "linkedin": {"url": "https://www.linkedin.com/in/gabriele-maferri-123456789/",
+                     "icon": "fab fa-linkedin"}
+	},
+	"bio": "Studente di Informatica con passione per lo sviluppo software e la sicurezza informatica. Attualmente impegnato in progetti di programmazione e apprendimento continuo."
+}

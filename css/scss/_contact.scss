@@ -1,0 +1,31 @@
+@import 'variables';
+
+.contact {
+  background-color: #f4f4f4;
+  padding: 3rem 1rem;
+  text-align: center;
+
+  h2 {
+    margin-bottom: 1rem;
+  }
+
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: auto;
+    gap: 1rem;
+
+    input,
+    textarea {
+      padding: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      font-size: 1rem;
+    }
+
+    .cta-button {
+      align-self: center;
+    }
+  }
+}

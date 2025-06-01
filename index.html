@@ -1,0 +1,178 @@
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<title>Gabriele Maferri</title>
+		  <link rel="icon" type="image/x-icon" href="/assets/img/favicon.ico" />
+		<link
+			rel="stylesheet"
+			href="css/styles.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+	</head>
+	<body>
+		<header>
+			<nav class="navbar">
+				<div
+					class="burger"
+					id="burger">
+					<i class="fa-solid fa-bars"></i>
+				</div>
+
+				<ul
+					class="nav-links"
+					id="nav-links">
+					<li><a href="#home">Home</a></li>
+					<li><a href="#about">About</a></li>
+					<li><a href="#projects">Projects</a></li>
+					<li><a href="#contact">Contact</a></li>
+				</ul>
+			</nav>
+		</header>
+		<section
+			id="home"
+			class="hero">
+			<div class="ascii-train-bg">
+				<pre id="ascii-train">
+      ====        ________                ___________
+  _D _|  |_______/        \__I_I_____===__|_________|
+   |(_)---  |   H\________/ |   |        =|___ ___|      _________________
+   /     |  |   H  |  |     |   |         ||_| |_||     _|
+  |      |  |   H  |__--------------------| [___] |   =|
+  | ________|___H__/__|_____/[][]~\_______|       |   -|
+  |/ |   |-----------I_____I [][] []  D   |=======|____|
+_/ =| o |=-~~\  /~~\  /~~\  /~~\ ____Y___________|_____/_
+ |/-=|___|=    ||    ||    ||   |_____/~\___/
+  \_/      \O=====O=====O=====O_/      \_/
+    </pre
+				>
+			</div>
+			<div class="hero-content">
+				<h1>
+					Hello, I'm
+					<span
+						class="highlight"
+						id="hero-name"></span>
+				</h1>
+				<p>Fullstack Developer</p>
+				<a
+					href="#about"
+					class="cta-button">
+					Scopri di più
+				</a>
+			</div>
+		</section>
+		<section
+			id="about"
+			class="about">
+			<div class="about-container">
+				<div class="profile-pic">
+					<img
+						id="profile-pic"
+						src="profile.jpg"
+						alt="Foto profilo" />
+				</div>
+				<div class="about-text">
+					<h2>Chi sono</h2>
+					<p>
+						Sviluppatore appassionato di tecnologia, mi dedico alla creazione di soluzioni digitali
+						moderne, intuitive e ben strutturate. Curioso per natura e attento ai dettagli, punto a
+						scrivere codice pulito e mantenibile, con l'obiettivo di trasformare idee in prodotti
+						funzionali e di valore.
+					</p>
+				</div>
+			</div>
+		</section>
+		<section
+			id="skills"
+			class="skills">
+			<h2>Competenze Tecniche</h2>
+			<div
+				class="skills-grid"
+				id="skills-grid"></div>
+
+			<div class="cv-button-wrapper">
+				<a
+					href="assets/CV_nomecognome.pdf"
+					class="cta-button"
+					download>
+					Scarica il mio CV
+				</a>
+			</div>
+		</section>
+
+		<section
+			id="projects"
+			class="projects">
+			<h2>I miei Progetti</h2>
+			<div
+				id="projects-grid"
+				class="projects-grid"></div>
+		</section>
+
+		<div
+			id="project-modal"
+			class="modal hidden">
+			<div class="modal-content">
+				<span class="close-btn">&times;</span>
+				<h3 id="modal-title"></h3>
+				<div
+					id="carousel"
+					class="carousel"></div>
+				<a
+					id="download-link"
+					href="#"
+					download
+					class="project-button">
+					Scarica progetto
+				</a>
+			</div>
+		</div>
+
+		<section
+			id="contact"
+			class="contact">
+			<h2>Contattami</h2>
+			<p>Hai domande o vuoi collaborare? Compila il modulo qui sotto!</p>
+
+			<form class="contact-form">
+				<input
+					type="text"
+					name="name"
+					placeholder="Il tuo nome"
+					required />
+				<input
+					type="email"
+					name="email"
+					placeholder="La tua email"
+					required />
+				<textarea
+					name="message"
+					placeholder="Il tuo messaggio..."
+					rows="5"
+					required></textarea>
+				<button
+					type="submit"
+					class="cta-button">
+					Invia
+				</button>
+			</form>
+		</section>
+
+		<footer class="footer">
+			<div class="footer-content">
+				<p id="footer-copyright"></p>
+				<div
+					class="social-icons"
+					id="footer-socials"></div>
+			</div>
+		</footer>
+
+		<script
+			type="module"
+			src="js/main.js"></script>
+	</body>
+</html>
