@@ -1,5 +1,17 @@
 [
   {
+    "title": "Portfolio",
+    "icon": "fa-solid fa-globe",
+    "description": "Sito web personale con informazioni su progetti e competenze.",
+    "images": [
+      "assets/img/Portfolio(1).png",
+      "assets/img/Portfolio(2).png",
+      "assets/img/Portfolio(3).png"
+    ],
+    "repoUrl":"https://github.com/GabrieleMaf/Portfolio", 
+    "downloadUrl": "https://github.com/GabrieleMaf/Portfolio/archive/refs/tags/Release.zip"
+  },
+  {
     "title": "Password Manager",
     "icon": "fas fa-lock",
     "description": "Gestione sicura delle password con crittografia AES.",

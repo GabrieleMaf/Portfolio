@@ -306,6 +306,17 @@ body {
 .modal .modal-content .project-button:hover {
   background-color: #009ac9;
 }
+.modal .github-button {
+  display: inline-block;
+  margin-left: 1rem;
+  font-size: 1.5rem;
+  color: #222;
+  vertical-align: middle;
+  transition: color 0.3s;
+}
+.modal .github-button:hover {
+  color: #00d4ff;
+}
 
 .contact {
   background-color: #f4f4f4;

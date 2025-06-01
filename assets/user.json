@@ -2,6 +2,8 @@
 	"name": "Gabriele Maferri",
 	"email": "gabriele.maferri@proton.me",
 	"image": "assets/img/propic.png",
+    "location": "Italy",
+    "cvUrl": "https://europa.eu/europass/eportfolio/screen/share/ef93f0ec-52fe-4842-819a-69b0ffb77a68?lang=en",
     "socials": {
         "github": {"url": "https://github.com/gabrielemaferri",
                    "icon": "fab fa-github"},

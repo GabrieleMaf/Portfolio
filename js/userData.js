@@ -15,6 +15,11 @@ document.addEventListener("DOMContentLoaded", async () => {
     const socials = document.getElementById("footer-socials");
     let socialsHtml = "";
 
+    const cvLink = document.getElementById("cv-link");
+    if (cvLink && data.cvUrl) {
+      cvLink.href = data.cvUrl;
+    }
+
     for (const key in data.socials) {
       const social = data.socials[key];
       socialsHtml += `
