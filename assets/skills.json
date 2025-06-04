@@ -2,26 +2,31 @@
   {
     "title": "Java",
     "icon": "fab fa-java",
-    "description": "Sviluppo backend solido e orientato agli oggetti."
+    "description": "Sviluppo backend solido e orientato agli oggetti.",
+    "documentation": "https://docs.oracle.com/en/java/"
   },
   {
     "title": "Spring",
     "icon": "fas fa-leaf",
-    "description": "REST API robuste con Spring Boot e MVC."
+    "description": "REST API robuste con Spring Boot e MVC.",
+    "documentation": "https://docs.spring.io/spring-framework/docs/current/reference/html/web.html"
   },
   {
     "title": "C#",
     "icon": "fas fa-code",
-    "description": "Applicazioni desktop e backend efficienti."
+    "description": "Applicazioni desktop e backend efficienti.",
+    "documentation": "https://docs.microsoft.com/en-us/dotnet/csharp/"
   },
   {
     "title": ".NET",
     "icon": "fas fa-network-wired",
-    "description": "Architetture modulari con .NET Core e Framework."
+    "description": "Architetture modulari con .NET Core e Framework.",
+    "documentation": "https://docs.microsoft.com/en-us/dotnet/"
   },
   {
     "title": "Angular",
     "icon": "fab fa-angular",
-    "description": "Frontend SPA moderne e modulari."
+    "description": "Frontend SPA moderne e modulari.",
+    "documentation": "https://angular.io/docs"
   }
 ]

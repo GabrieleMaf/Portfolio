@@ -9,9 +9,13 @@ document.addEventListener("DOMContentLoaded", async () => {
       const card = document.createElement("div");
       card.classList.add("skill-card");
       card.innerHTML = `
-        <h3><i class="${skill.icon}"></i> ${skill.title}</h3>
-        <p>${skill.description}</p>
-      `;
+    <h3><i class="${skill.icon}"></i> ${skill.title}</h3>
+    <p>${skill.description}</p>
+  `;
+      card.style.cursor = "pointer";
+      card.addEventListener("click", () => {
+        window.open(skill.documentation, "_blank");
+      });
       grid.appendChild(card);
     });
   } catch (error) {

@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   const res = await fetch("assets/projects.json");
   const projects = await res.json();
 
-  projects.forEach((proj, index) => {
+  projects.forEach((proj) => {
     const card = document.createElement("div");
     card.classList.add("project-card");
     card.innerHTML = `

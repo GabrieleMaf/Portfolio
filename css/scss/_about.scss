@@ -1,46 +1,46 @@
-@import 'variables';
+@import "variables";
 
 .about {
-  padding: 4rem 2rem;
-  background-color: white;
+	padding: 4rem 2rem;
+	background-color: white;
 
-  .about-container {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-    max-width: 1000px;
-    margin: 0 auto;
-    flex-wrap: wrap;
+	.about-container {
+		display: flex;
+		align-items: center;
+		gap: 2rem;
+		max-width: 1000px;
+		margin: 0 auto;
+		flex-wrap: wrap;
 
-    .profile-pic {
-      flex: 1;
-      min-width: 250px;
-      text-align: center;
+		.profile-pic {
+			flex: 1;
+			min-width: 250px;
+			text-align: center;
 
-      img {
-        width: 200px;
-        height: 200px;
-        object-fit: cover;
-        border-radius: 50%;
-        border: 4px solid #00d4ff;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-      }
-    }
+			img {
+				width: 200px;
+				height: 200px;
+				object-fit: cover;
+				border-radius: 50%;
+				border: 4px solid #00d4ff;
+				box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+			}
+		}
 
-    .about-text {
-      flex: 2;
-      min-width: 300px;
+		.about-text {
+			flex: 2;
+			min-width: 300px;
 
-      h2 {
-        font-size: 2rem;
-        margin-bottom: 1rem;
-      }
+			h2 {
+				font-size: 2rem;
+				margin-bottom: 1rem;
+			}
 
-      p {
-        font-size: 1.1rem;
-        line-height: 1.6;
-        color: #333;
-      }
-    }
-  }
+			p {
+				font-size: 1.1rem;
+				line-height: 1.6;
+				color: #333;
+			}
+		}
+	}
 }

@@ -1,66 +1,68 @@
-@import 'variables';
+@import "variables";
 
 .skills {
-  padding: 4rem 2rem;
-  background-color: #f9f9f9;
-  text-align: center;
+	padding: 4rem 2rem;
+	background-color: #f9f9f9;
+	text-align: center;
 
-  h2 {
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
-    color: #222;
-  }
+	h2 {
+		font-size: 2.5rem;
+		margin-bottom: 2rem;
+		color: #222;
+	}
 
-  .skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    max-width: 1000px;
-    margin: 0 auto;
-  }
+	.skills-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		gap: 2rem;
+		max-width: 1000px;
+		margin: 0 auto;
+	}
 
-  .skill-card {
-    background: white;
-    padding: 1rem;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+	.skill-card {
+		background: white;
+		padding: 1rem;
+		border-radius: 10px;
+		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+		transition: transform 0.2s ease, box-shadow 0.2s ease;
+		cursor: pointer; 
 
-    &:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    }
+		&:hover {
+			transform: translateY(-5px) scale(1.03);
+			box-shadow: 0 4px 16px rgba(0, 212, 255, 0.15);
+			background: #e6faff;
+		}
 
-    h3 {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      margin-bottom: 0.5rem;
-    }
+		h3 {
+			display: flex;
+			align-items: center;
+			gap: 0.5rem;
+			margin-bottom: 0.5rem;
+		}
 
-    i {
-      font-size: 1.3rem;
-      color: #00d4ff;
-    }
-  }
+		i {
+			font-size: 1.3rem;
+			color: #00d4ff;
+		}
+	}
 
-.cv-button-wrapper {
-  margin-top: 3rem;
+	.cv-button-wrapper {
+		margin-top: 3rem;
 
-  .cta-button {
-    padding: 0.75rem 1.5rem;
-    font-size: 1rem;
-    color: #fff;
-    background-color: #00d4ff;
-    border: none;
-    border-radius: 25px;
-    cursor: pointer;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
+		.cta-button {
+			padding: 0.75rem 1.5rem;
+			font-size: 1rem;
+			color: #fff;
+			background-color: #00d4ff;
+			border: none;
+			border-radius: 25px;
+			cursor: pointer;
+			text-decoration: none;
+			transition: background-color 0.3s ease;
 
-    &:hover {
-      background-color: #00b0d4;
-    }
-  }
-}
+			&:hover {
+				background-color: #00b0d4;
+			}
+		}
+	}
 }
