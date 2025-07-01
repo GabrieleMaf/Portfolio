@@ -14,7 +14,7 @@
 	{
 		"title": "Password Manager",
 		"icon": "fas fa-lock",
-		"description": "Gestione sicura delle password con crittografia AES.",
+		"description": "Password Manager cross-platform Flutter/Python con crittografia AES.",
 		"images": ["assets/img/bit1.png", "assets/img/bit2.jpeg"],
 		"downloadUrl": "assets/password-manager.zip"
 	},
@@ -26,10 +26,11 @@
 		"downloadUrl": "assets/budget-tracker.zip"
 	},
 	{
-		"title": "Mini RPG",
-		"icon": "fas fa-gamepad",
-		"description": "Gioco a turni roguelike con combattimento semplice.",
-		"images": ["assets/images/rpg1.png", "assets/images/rpg2.png"],
-		"downloadUrl": "assets/mini-rpg.zip"
+		"title": "Authify",
+		"icon": "fas fa-key",
+		"description": "Sistema di autenticazione MEAN stack per applicazioni web.",
+		"images": ["assets/images/authify.png", "assets/images/authify.png"],
+		"repoUrl": "https://github.com/GabrieleMaf/Authify",
+		"downloadUrl": "assets/authify.zip"
 	}
 ]

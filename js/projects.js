@@ -1,35 +1,42 @@
-document.addEventListener("DOMContentLoaded", async () => {
-  const grid = document.getElementById("projects-grid");
-  const modal = document.getElementById("project-modal");
-  const title = document.getElementById("modal-title");
-  const carousel = document.getElementById("carousel");
-  const downloadLink = document.getElementById("download-link");
-  const githubLink = document.getElementById("github-link");
+export async function loadProjects() {
+  const getEl = id => document.getElementById(id);
+  const grid = getEl("projects-grid");
+  const modal = getEl("project-modal");
+  const title = getEl("modal-title");
+  const carousel = getEl("carousel");
+  const downloadLink = getEl("download-link");
+  const githubLink = getEl("github-link");
   const closeBtn = document.querySelector(".close-btn");
 
-  const res = await fetch("assets/projects.json");
-  const projects = await res.json();
+  const fetchProjects = () =>
+    fetch("assets/projects.json").then(res => res.json());
 
-  projects.forEach((proj) => {
+  const createCard = proj => {
     const card = document.createElement("div");
-    card.classList.add("project-card");
+    card.className = "project-card";
     card.innerHTML = `
       <h3><i class="${proj.icon}"></i> ${proj.title}</h3>
       <p>${proj.description}</p>
     `;
-    card.addEventListener("click", () => {
-      title.innerText = proj.title;
-      downloadLink.href = proj.downloadUrl;
-      carousel.innerHTML = proj.images
-        .map(src => `<img src="${src}" alt="${proj.title}" />`)
-        .join("");
-      githubLink.href = proj.repoUrl; // <-- aggiungi questa riga
-      modal.classList.remove("hidden");
-    });
-    grid.appendChild(card);
-  });
+    card.addEventListener("click", () => showModal(proj));
+    return card;
+  };
 
-  closeBtn.addEventListener("click", () => {
-    modal.classList.add("hidden");
-  });
-});
+  const showModal = proj => {
+    title.textContent = proj.title;
+    downloadLink.href = proj.downloadUrl;
+    githubLink.href = proj.repoUrl;
+    carousel.innerHTML = proj.images
+      .map(src => `<img src="${src}" alt="${proj.title}" />`)
+      .join("");
+    modal.classList.remove("hidden");
+  };
+
+  const hideModal = () => modal.classList.add("hidden");
+
+  closeBtn.addEventListener("click", hideModal);
+
+  const projects = await fetchProjects();
+  grid.innerHTML = "";
+  projects.map(createCard).forEach(card => grid.appendChild(card));
+}

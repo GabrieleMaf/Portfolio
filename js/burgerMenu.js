@@ -1,17 +1,17 @@
-document.addEventListener("DOMContentLoaded", () => {
+export function initBurgerMenu() {
   const burger = document.getElementById('burger');
   const navLinks = document.getElementById('nav-links');
 
-  burger.addEventListener('click', (e) => {
+  const toggleMenu = e => {
     e.stopPropagation();
     navLinks.classList.toggle('show');
-  });
+  };
 
-  navLinks.addEventListener('click', (e) => {
-    e.stopPropagation();
-  });
+  const stopPropagation = e => e.stopPropagation();
 
-  document.addEventListener('click', () => {
-    navLinks.classList.remove('show');
-  });
-});
+  const closeMenu = () => navLinks.classList.remove('show');
+
+  burger.addEventListener('click', toggleMenu);
+  navLinks.addEventListener('click', stopPropagation);
+  document.addEventListener('click', closeMenu);
+}

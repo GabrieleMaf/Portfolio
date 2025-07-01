@@ -1,42 +1,52 @@
-document.addEventListener("DOMContentLoaded", async () => {
-  try {
-    const res = await fetch("assets/user.json");
-    const data = await res.json();
+const setText = (id, text) => {
+  const el = document.getElementById(id);
+  if (el) el.textContent = text;
+};
 
-    const heroName = document.getElementById("hero-name");
-    if (heroName) heroName.textContent = data.name;
+const setSrc = (id, src) => {
+  const el = document.getElementById(id);
+  if (el) el.src = src;
+};
 
-    const profilePic = document.getElementById("profile-pic");
-    if (profilePic) profilePic.src = data.image;
+const setHref = (id, href) => {
+  const el = document.getElementById(id);
+  if (el) el.href = href;
+};
 
-    const copyright = document.getElementById("footer-copyright");
-    copyright.innerHTML = `&copy; 2025 ${data.name}. Tutti i diritti riservati.`;
+const setHtml = (id, html) => {
+  const el = document.getElementById(id);
+  if (el) el.innerHTML = html;
+};
 
-    const socials = document.getElementById("footer-socials");
-    let socialsHtml = "";
-
-    const cvLink = document.getElementById("cv-link");
-    if (cvLink && data.cvUrl) {
-      cvLink.href = data.cvUrl;
-    }
-
-    for (const key in data.socials) {
-      const social = data.socials[key];
-      socialsHtml += `
+const socialsHtml = (socials, email) =>
+  Object.entries(socials)
+    .map(
+      ([key, social]) => `
     <a href="${social.url}" target="_blank" aria-label="${key.charAt(0).toUpperCase() + key.slice(1)}">
       <i class="${social.icon}"></i>
-    </a>
-  `;
-    }
-
-    socialsHtml += `
-  <a href="mailto:${data.email}" aria-label="Email">
+    </a>`
+    )
+    .join("") +
+  `
+  <a href="mailto:${email}" aria-label="Email">
     <i class="fas fa-envelope"></i>
   </a>
 `;
 
-    socials.innerHTML = socialsHtml;
+export async function loadUserData() {
+  try {
+    const res = await fetch("assets/user.json");
+    const data = await res.json();
+
+    setText("hero-name", data.name);
+    setSrc("profile-pic", data.image);
+    setHtml(
+      "footer-copyright",
+      `&copy; 2025 ${data.name}. Tutti i diritti riservati.`
+    );
+    setHref("cv-link", data.cvUrl);
+    setHtml("footer-socials", socialsHtml(data.socials, data.email));
   } catch (error) {
     console.error("Errore nel caricamento del footer:", error);
   }
-});
+}
